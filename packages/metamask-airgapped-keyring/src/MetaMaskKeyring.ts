@@ -53,7 +53,7 @@ export class MetaMaskKeyring extends BaseKeyring {
       );
     } else {
       messageToSign = Buffer.from(
-        (tx as FeeMarketEIP1559Transaction).serialize()
+        (tx as FeeMarketEIP1559Transaction).getMessageToSign()
       );
     }
     const hdPath = await this._pathFromAddress(address);
