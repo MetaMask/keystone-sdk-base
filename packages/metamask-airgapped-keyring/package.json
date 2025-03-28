@@ -1,6 +1,6 @@
 {
-  "name": "@dawnseeker8/metamask-airgapped-keyring",
-  "version": "0.15.0-preview",
+  "name": "@metamask/metamask-airgapped-keyring",
+  "version": "0.15.0",
   "description": "airgapped eth keyring for metamask",
   "author": "aaronisme <aarondongchen@gmail.com>",
   "homepage": "https://github.com/KeystoneHQ/keystone-airgaped-base#readme",
