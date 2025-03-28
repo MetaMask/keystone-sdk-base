@@ -33,6 +33,16 @@ export class MetaMaskKeyring extends BaseKeyring {
     return this.getInteraction().memStore;
   };
 
+  /**
+   * PATCH INFORMATION
+   * The addAccounts method from keyrings is now expected to return only newly created accounts.
+   * This patch overrides the method and its return value to ensure it behaves as intended.
+   */
+  async addAccounts(n = 1) {
+    const accounts = await super.addAccounts(n);
+    return accounts.slice(-1 * n);
+  }
+
   async signTransaction(address: string, tx: any): Promise<any> {
     const dataType =
       tx.type === 0 ? DataType.transaction : DataType.typedTransaction;
@@ -43,7 +53,7 @@ export class MetaMaskKeyring extends BaseKeyring {
       );
     } else {
       messageToSign = Buffer.from(
-        (tx as FeeMarketEIP1559Transaction).serialize()
+        (tx as FeeMarketEIP1559Transaction).getMessageToSign()
       );
     }
     const hdPath = await this._pathFromAddress(address);
