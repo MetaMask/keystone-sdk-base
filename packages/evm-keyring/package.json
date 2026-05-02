@@ -21,7 +21,7 @@
     "@keystonehq/bc-ur-registry": "^0.5.4",
     "@keystonehq/bc-ur-registry-evm": "^0.5.2",
     "@keystonehq/sdk": "^0.19.2",
-    "uuid": "^9.0.0"
+    "uuid": "^14.0.0"
   },
   "devDependencies": {
     "@babel/preset-typescript": "^7.15.0",
