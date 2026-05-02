@@ -23,7 +23,7 @@
     "@keystonehq/sdk": "^0.19.2",
     "@solana/web3.js": "^1.36.0",
     "bs58": "^5.0.0",
-    "uuid": "^8.3.2"
+    "uuid": "^14.0.0"
   },
   "devDependencies": {
     "@babel/preset-typescript": "^7.15.0",
